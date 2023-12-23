@@ -1,9 +1,10 @@
 .App {
   text-align: center;
-  background-image: url('../assets/christmas.png');
+  /* background-image: url('../assets/christmas.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-image 0.2s ease-in-out;
 }
 
 .App-logo {
@@ -24,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(15px + 2vmin);
   color: white;
 }
 
@@ -39,4 +40,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: gvs;
+  src: url(../public/GreatVibes-Regular.ttf);
+}
+
+.gvs {
+  font-family: gvs;
 }
