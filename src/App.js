@@ -4,23 +4,15 @@ import Snowfall from 'react-snowfall';
 import useSound from 'use-sound';
 import VaraText from './VaraText'
 import MyTypewriterComponent from './components/MyTypewriterComponent/MyTypewriterComponent';
-import { useRef } from 'react';
-
-function usePlaySoundOnMount(play) {
-  const hasPlayed = useRef(false);
-
-  if (!hasPlayed.current) {
-    setTimeout(() => {
-      play();
-      hasPlayed.current = true;
-    }, 500);
-  }
-}
 
 function App() {
   const soundUrl = process.env.PUBLIC_URL + '/assets/AllIWant.mp3';
   const [play] = useSound(soundUrl, { volume: 0.5 });
-  usePlaySoundOnMount(play);
+
+  useEffect(() => {
+    play();
+  }, [play]);
+
   const images = [
     './assets/pigshark1.png',
     './assets/pigshark2.png',
@@ -44,10 +36,10 @@ function App() {
   const [shuffledImages, setShuffledImages] = useState(shuffleImages([...images]));
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  images.forEach(img => {
-    const preloadImg = new Image();
-    preloadImg.src = img;
-  });
+  // images.forEach(img => {
+  //   const preloadImg = new Image();
+  //   preloadImg.src = img;
+  // });
 
   // Inline style for background image
   const backgroundStyle = {
