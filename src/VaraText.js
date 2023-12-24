@@ -13,10 +13,12 @@ function VaraText(props) {
       [
         {
           text: props.text,
-          fontSize: 60,
+          fontSize: 50,
           strokeWidth: 0.9,
-          color: "#FFFFFF",
+        //   color: "#FFFFFF",
+          color: "#F5F5DC",
           duration: 5000,
+          textAlign: "left",
         },
       ]
     );
