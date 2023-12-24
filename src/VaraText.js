@@ -13,8 +13,9 @@ function VaraText(props) {
       [
         {
           text: props.text,
-          fontSize: 40,
-          strokeWidth: 0.7,
+          fontSize: 60,
+          strokeWidth: 0.9,
+          color: "#FFFFFF",
         },
       ]
     );
