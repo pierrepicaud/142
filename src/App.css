@@ -27,11 +27,37 @@
   src: url(../public/GreatVibes-Regular.ttf);
 }
 
+.text-outline {
+  color: #a68b6d; /* Your chosen text color */
+  text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000; /* Black text shadow for outline effect */
+}
+
+.darker-beige {
+  color: #e4d5c5; /* Darker shade of beige */
+}
+
 .gvs {
   font-family: gvs;
+  font-size: 1.75rem; /* Responsive font size */
+  margin: 0 auto;
+  max-width: 75%; /* Percentage of the screen width */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+  .gvs {
+    font-size: 1.25rem; /* Smaller font size for mobile devices */
+    padding: 10px;
+  }
 }
 
 .vara-wrapper {
-  width: 75%; /* Set width to 75% */
+  width: 55%; /* Set width to 75% */
   margin: 0 auto; /* Center the wrapper */
 }

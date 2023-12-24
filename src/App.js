@@ -3,6 +3,7 @@ import './App.css';
 import Snowfall from 'react-snowfall';
 import useSound from 'use-sound';
 import VaraText from './VaraText'
+import MyTypewriterComponent from './components/MyTypewriterComponent/MyTypewriterComponent';
 
 function App() {
   const soundUrl = process.env.PUBLIC_URL + '/assets/AllIWant.mp3';
@@ -64,8 +65,20 @@ function App() {
       <Snowfall />
       <header className="App-header">
         <div className="vara-wrapper">
-          <VaraText text="Merry Christmas and 143 pp :P" />
+        <VaraText text="Season's Greetings to My Beloved Ninh" />
         </div>
+        <div className='gvs text-outline darker-beige'style={{ textAlign: 'left' }}>
+          <MyTypewriterComponent text="Dear Ninh,<br />
+          As the snowflakes gently fall and the festive lights glow, my ember thoughts of you burn brighter, now miles away but forever close in my heart, and though the distance between us has grown, my love for you is a commitment I keep making everyday.<br /><br />
+          This Christmas, while we are apart, I'm sending you warmth and love across the miles *hugs*. May the holiday season fill your new home with joy, peace, and the comfort of knowing that you are cherished.<br /><br />
+          Looking forward to June, until then, I'm hold onto our precious memories and the promise of a future together.<br /><br />
+          Merry Christmas nha con lơn yêu.<br />
+          You will always be in my heart,
+          Liêu Dụ Thâm <br />
+          143
+          " delay={5200}/>
+        </div>
+  
       </header>
     </div>
   );
