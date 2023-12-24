@@ -24,27 +24,39 @@ function App() {
     './assets/pigshark14.png',
   ];
 
-  const getRandomImage = () => images[Math.floor(Math.random() * images.length)];
+  // Function to shuffle images
+  const shuffleImages = (array) => array.sort(() => Math.random() - 0.5);
 
-  // State for the background image
-  const [backgroundImage, setBackgroundImage] = useState(getRandomImage());
+  const [shuffledImages, setShuffledImages] = useState(shuffleImages([...images]));
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Event handler for changing the background
-  const changeBackground = () => {
-    setBackgroundImage(getRandomImage());
-  };
+  useEffect(() => {
+    images.forEach((img) => {
+      const preloadImg = new Image();
+      preloadImg.src = img;
+    });
+    play();
+  }, [play]);
+
+
 
   // Inline style for background image
   const backgroundStyle = {
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundImage: `url(${shuffledImages[currentIndex]})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
   };
-  
-  useEffect(() => {
-    play();
-  }, [play])
+
+  // Event handler for changing the background
+  const changeBackground = () => {
+    if (currentIndex < shuffledImages.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      setShuffledImages(shuffleImages([...images]));
+      setCurrentIndex(0);
+    }
+  };
 
   return (
     <div className="App" style={backgroundStyle} onClick={changeBackground} >
