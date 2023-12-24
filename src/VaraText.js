@@ -34,7 +34,7 @@ function VaraText(props) {
   }, [props.text]); // Dependency array to re-run the effect when text changes
 
   return (
-    <div className="vara-wrapper">
+    <div>
       <svg style={{ height: 0 }}>
         <defs>
           <filter id="glow">

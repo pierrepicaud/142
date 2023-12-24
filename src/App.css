@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  /* background-image: url('/public/assets/christmas1.png'); */
+  /* background-image: url('./assets/pigshark1.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(20px + 2vmin);
-  color: white;
+  /* color: white; */
 }
 
 .App-link {
