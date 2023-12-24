@@ -1,16 +1,17 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
-function MyTypewriterComponent({ text, delay }) {
+function MyTypewriterComponent({ text, pause }) {
   return (
     <div>
       <Typewriter
         options={{
           cursor: '', // Set the cursor to an empty string to hide it
+          delay: 50,
         }}
         onInit={(typewriter) => {
           typewriter
-            .pauseFor(delay)
+            .pauseFor(pause)
             .typeString(text)
             .callFunction(() => {
               // Function to hide the cursor
