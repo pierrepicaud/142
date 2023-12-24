@@ -16,6 +16,12 @@ function App() {
     'assets/christmas6.png',
     'assets/christmas7.png',
     'assets/christmas8.png',
+    'assets/christmas9.png',
+    'assets/christmas10.png',
+    'assets/christmas11.png',
+    'assets/christmas12.png',
+    'assets/christmas13.png',
+    'assets/christmas14.png',
   ];
 
   const getRandomImage = () => images[Math.floor(Math.random() * images.length)];
