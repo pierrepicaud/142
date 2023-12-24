@@ -34,7 +34,6 @@ function App() {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    // 'background-color': '#34302c'
   };
   
   useEffect(() => {
@@ -45,9 +44,9 @@ function App() {
     <div className="App" style={backgroundStyle} onClick={changeBackground} >
       <Snowfall />
       <header className="App-header">
-        <p>
-          <VaraText className='gvs' text="Merry Christmas and 143 pp :P" />
-        </p>
+        <div className="vara-wrapper">
+          <VaraText text="Merry Christmas and 143 pp :P" />
+        </div>
       </header>
     </div>
   );

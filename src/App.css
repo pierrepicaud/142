@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(15px + 2vmin);
+  font-size: calc(20px + 2vmin);
   color: white;
 }
 
@@ -29,4 +29,9 @@
 
 .gvs {
   font-family: gvs;
+}
+
+.vara-wrapper {
+  width: 75%; /* Set width to 75% */
+  margin: 0 auto; /* Center the wrapper */
 }
