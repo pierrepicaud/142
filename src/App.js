@@ -4,14 +4,14 @@ import Snowfall from 'react-snowfall';
 
 function App() {
   const images = [
-    './assets/christmas1.png',
-    './assets/christmas2.png',
-    './assets/christmas3.png',
-    './assets/christmas4.png',
-    './assets/christmas5.png',
-    './assets/christmas6.png',
-    './assets/christmas7.png',
-    './assets/christmas8.png',
+    'assets/christmas1.png',
+    'assets/christmas2.png',
+    'assets/christmas3.png',
+    'assets/christmas4.png',
+    'assets/christmas5.png',
+    'assets/christmas6.png',
+    'assets/christmas7.png',
+    'assets/christmas8.png',
   ];
 
   const getRandomImage = () => images[Math.floor(Math.random() * images.length)];
@@ -30,6 +30,7 @@ function App() {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    // 'background-color': '#34302c'
   };
 
   return (
