@@ -16,6 +16,7 @@ function VaraText(props) {
           fontSize: 60,
           strokeWidth: 0.9,
           color: "#FFFFFF",
+          duration: 5000,
         },
       ]
     );
