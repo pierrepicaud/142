@@ -45,9 +45,6 @@ function App() {
     <div className="App" style={backgroundStyle} onClick={changeBackground} >
       <Snowfall />
       <header className="App-header">
-        {/* <p className='gvs'>
-          Merry Christmas and 143 pặc pặc!
-        </p> */}
         <p>
           <VaraText className='gvs' text="Merry Christmas and 143 pp :P" />
         </p>

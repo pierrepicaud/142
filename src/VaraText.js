@@ -31,7 +31,22 @@ function VaraText(props) {
     };
   }, [props.text]); // Dependency array to re-run the effect when text changes
 
-  return <div id="vara-container" className="z-[20]"></div>;
+  return (
+    <div>
+      <svg style={{ height: 0 }}>
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="4.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+      </svg>
+      <div id="vara-container" style={{ filter: 'url(#glow)' }}></div>
+    </div>
+  );;
 }
 
 export default VaraText;
