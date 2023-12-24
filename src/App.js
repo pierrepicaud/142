@@ -50,9 +50,7 @@ function App() {
     <div className="App" style={backgroundStyle} onClick={changeBackground} >
       <Snowfall />
       <header className="App-header">
-        <div className="vara-wrapper">
           <VaraText text="Merry Christmas and 143 pp :P" />
-        </div>
       </header>
     </div>
   );

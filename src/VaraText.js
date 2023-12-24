@@ -4,7 +4,7 @@ import Vara from 'vara';
 function VaraText(props) {
   useEffect(() => {
     // Create a new Vara instance
-    const varaInstance = new Vara(
+    new Vara(
       "#vara-container",
     //   "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
     //   "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Pacifico/PacificoSLO.json",
@@ -34,7 +34,7 @@ function VaraText(props) {
   }, [props.text]); // Dependency array to re-run the effect when text changes
 
   return (
-    <div>
+    <div className="vara-wrapper">
       <svg style={{ height: 0 }}>
         <defs>
           <filter id="glow">
