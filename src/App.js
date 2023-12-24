@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Snowfall from 'react-snowfall';
 import useSound from 'use-sound';
+import VaraText from './VaraText'
 
 function App() {
   const soundUrl = process.env.PUBLIC_URL + '/assets/AllIWant.mp3';
@@ -44,8 +45,11 @@ function App() {
     <div className="App" style={backgroundStyle} onClick={changeBackground} >
       <Snowfall />
       <header className="App-header">
-        <p className='gvs'>
+        {/* <p className='gvs'>
           Merry Christmas and 143 pặc pặc!
+        </p> */}
+        <p>
+          <VaraText className='gvs' text="Merry Christmas and 143 pp :P" />
         </p>
       </header>
     </div>
