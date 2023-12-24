@@ -65,7 +65,7 @@ function App() {
       <Snowfall />
       <header className="App-header">
         <div className="vara-wrapper">
-        <VaraText text="Season's Greetings to My Beloved Ninh" />
+        <VaraText text="Season's Greetings to My Beloved Ninh <3" />
         </div>
         <div className='gvs text-outline darker-beige'style={{ textAlign: 'left' }}>
           <MyTypewriterComponent text="Dear Ninh, <br/ ><br/ >
