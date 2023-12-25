@@ -9,9 +9,18 @@ function App() {
   const soundUrl = process.env.PUBLIC_URL + '/assets/AllIWant.mp3';
   const [play] = useSound(soundUrl, { volume: 0.5 });
 
+  const [typingComplete, setTypingComplete] = useState(false); // New state
+
   useEffect(() => {
-    play();
-  }, [play]);
+    if (typingComplete) {
+      play();
+    }
+  }, [typingComplete, play]);
+
+  const onTypingComplete = () => {
+    console.log("Typing completed"); // This line will log a message to the console
+    setTypingComplete(true);
+  };
 
   const images = [
     './assets/pigshark1.png',
@@ -62,22 +71,21 @@ function App() {
   return (
     <div className="App" style={backgroundStyle} onClick={changeBackground} >
     {/* <div className="App"> */}
-      <Snowfall />
       <header className="App-header">
         <div className="vara-wrapper">
-        <VaraText text="Season's Greetings to My Beloved Ninh <3" />
+        <VaraText text="Merry Chirstmas to My Beloved Ninh <3" />
         </div>
         <div className='gvs text-outline darker-beige'style={{ textAlign: 'left' }}>
           <MyTypewriterComponent text="Dear Ninh, <br/ ><br/ >
             As the snowflakes gently fall and the festive lights glow, my ember thoughts of you burn brighter. Though miles away, you remain forever close in my heart. Despite the growing distance, my love for you is a commitment I renew every day.<br/ ><br/ >
-            This Christmas, while we are apart, I'm sending you warmth and love across the miles hugs. May the holiday season fill your new home with joy, peace, and the comfort of knowing that you are deeply cherished.
+            This Christmas, while we are apart, I'm sending you warmth and love across the miles *hugs*. May the holiday season fill your new home with joy, peace, and the comfort of knowing that you are deeply cherished.
             Looking forward to June, I'll hold onto our precious memories and the promise of a future together.<br/ ><br/ >
-            Merry Christmas, nha con lợn yêu.<br/ ><br/ >
-            You will always be in my heart,<br/ ><br/ >
-            Liêu Dụ Thâm<br/ ><br/ >
-            143" pause={5000}/>
+            You will always be in my heart,<br/>
+            Liêu Dụ Thâm<br/>
+            143" pause={5000} onComplete={onTypingComplete} // Add this prop
+            />
         </div>
-  
+        {typingComplete && <Snowfall />} {/* Conditionally render Snowfall */}
       </header>
     </div>
   );

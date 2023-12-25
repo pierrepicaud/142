@@ -1,12 +1,12 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
-function MyTypewriterComponent({ text, pause }) {
+function MyTypewriterComponent({ text, pause, onComplete }) {
   return (
     <div>
       <Typewriter
         options={{
-          cursor: '', // Set the cursor to an empty string to hide it
+          cursor: '',
           delay: 50,
         }}
         onInit={(typewriter) => {
@@ -14,10 +14,9 @@ function MyTypewriterComponent({ text, pause }) {
             .pauseFor(pause)
             .typeString(text)
             .callFunction(() => {
-              // Function to hide the cursor
-              const elements = document.getElementsByClassName("Typewriter__cursor");
-              if (elements.length > 0) {
-                elements[0].style.display = 'none';
+              // Call onComplete function after typing is complete
+              if (onComplete) {
+                onComplete();
               }
             })
             .start();

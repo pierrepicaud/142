@@ -28,7 +28,6 @@
 }
 
 .text-outline {
-  color: #a68b6d; /* Your chosen text color */
   text-shadow:
     -1px -1px 0 #000,  
      1px -1px 0 #000,
@@ -42,7 +41,7 @@
 
 .gvs {
   font-family: gvs;
-  font-size: 1.75rem; /* Responsive font size */
+  font-size: 1.55rem; /* Responsive font size */
   margin: 0 auto;
   max-width: 75%; /* Percentage of the screen width */
   padding: 20px;
@@ -52,7 +51,7 @@
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 600px) {
   .gvs {
-    font-size: 1.25rem; /* Smaller font size for mobile devices */
+    font-size: 1.15rem; /* Smaller font size for mobile devices */
     padding: 10px;
   }
 }
