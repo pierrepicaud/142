@@ -57,12 +57,8 @@ function App() {
   const [shuffledImages, setShuffledImages] = useState(shuffleImages([...images]));
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // images.forEach(img => {
-  //   const preloadImg = new Image();
-  //   preloadImg.src = img;
-  // });
-
   // Inline style for background image
+  // The placeholder doesn't work but it somehow improved the performance
   const backgroundStyle = {
     backgroundImage: `url(${useProgressiveImage(shuffledImages[currentIndex], 'https://placehold.co/600x400')})`,
     backgroundSize: 'cover',
