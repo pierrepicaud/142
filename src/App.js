@@ -22,6 +22,18 @@ function App() {
     setTypingComplete(true);
   };
 
+  const useProgressiveImage = src => {  
+    const [sourceLoaded, setSourceLoaded] = useState(null)
+  
+    useEffect(() => {
+      const img = new Image()
+      img.src = src
+      img.onload = () => setSourceLoaded(src)
+    }, [src])
+  
+    return sourceLoaded 
+  }
+
   const images = [
     './assets/pigshark1.png',
     './assets/pigshark2.png',
@@ -52,12 +64,12 @@ function App() {
 
   // Inline style for background image
   const backgroundStyle = {
-    backgroundImage: `url(${shuffledImages[currentIndex]})`,
+    backgroundImage: `url(${useProgressiveImage(shuffledImages[currentIndex], 'https://placehold.co/600x400')})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
   };
-
+  
   // Event handler for changing the background
   const changeBackground = () => {
     if (currentIndex < shuffledImages.length - 1) {
